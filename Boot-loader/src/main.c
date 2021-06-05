@@ -1,7 +1,7 @@
 /*
  * main.c
  *
- *  Created on: ??þ/??þ/????
+ *  Created on: ??Ã¾/??Ã¾/????
  *      Author: H
  */
 #include "LSTD_TYPES.h"
@@ -41,7 +41,7 @@ void main(void)
 	u32 EntryPointAddress = 0x08002000;/*This is optional but you have to make sure this address isn't in the scope
 	 	 	 	 	 	 	 	 	 	 	 	 of the bootloader project.*/
 	/*Please note that the EntryPointAddress is not the beginning of your application ... it refers to
-	  MSP : Main Stack Pointer (32 bits) .... so what you need to access is the EntryPointAddress + 0x4*/
+	  Stack pointer (32 bits) .... so what you need to access is reset handler ==> EntryPointAddress + 0x4*/
 	  /*You also have to edit the linker script (in application project not this project)where the memory section
 	   lies(ldscripts/mem.ld) to tell your application its entry point.
 	   Ex.: FLASH (rx) : ORIGIN = 0x08002000 (This is to edit the entry point)
